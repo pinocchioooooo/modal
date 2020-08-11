@@ -1,0 +1,76 @@
+body {
+  padding: 2.54cm 1.8cm;
+
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  font-family: 'Courier New';
+}
+
+.shade {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 30%;
+
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 4px 8px;
+
+  cursor: move;
+  user-select: none;
+}
+
+.modal-cancel {
+  box-sizing: border-box;
+  padding: 0 8px;
+
+  cursor: pointer;
+}
+
+.modal-body {
+  min-height: 100px;
+  padding: 4px 8px;
+
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 4px 8px;
+}
+
+.modal-footer button:not(:last-child) {
+  margin-right: 12px;
+}
+
+.hidden {
+  display: none;
+}
