@@ -11,6 +11,8 @@
       this.addClick()
 
       this.drag()
+
+      this._scrollbarWidth = this._getScrollbarWidth()
     },
 
     createDOM() {
@@ -99,12 +101,19 @@
       this.emit("open")
 
       this.element.className = "shade"
+
+      if (this._hasScrollbar()) {
+        document.body.style.paddingRight = this._scrollbarWidth + "px"
+      }
+
       document.body.style.overflow = "hidden"
     },
 
     close() {
       this.element.className = "shade hidden"
-      document.body.style.overflow = "auto"
+      document.body.style.overflow = ""
+      document.body.style.paddingRight = ""
+
       this.element.children[0].removeAttribute("style")
 
       this.emit("close")
@@ -118,6 +127,20 @@
       this.pond[eventName].forEach((i) => {
         typeof i === "function" && i.call(this)
       })
+    },
+
+    _getScrollbarWidth() {
+      const scrollDiv = document.createElement("div")
+      scrollDiv.className = "modal-scrollbar-measure"
+      document.body.appendChild(scrollDiv)
+      const scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth
+      document.body.removeChild(scrollDiv)
+      return scrollbarWidth
+    },
+
+    _hasScrollbar() {
+      const rect = document.body.getBoundingClientRect()
+      return rect.left + rect.right < window.innerWidth
     },
   }
 
