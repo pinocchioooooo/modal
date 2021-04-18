@@ -1,6 +1,7 @@
 # Modal
 
 一个原生 JavaScript 实现的 modal 组件。
+
 ![demo](/assets/demo.gif)
 
 ## 特性
