@@ -15,7 +15,7 @@
 
 示例代码：
 
-```
+```JavaScript
 const modal = Modal({
   title: 'Lorem',
   template:
@@ -39,7 +39,7 @@ const modal = Modal({
 
 事件：
 
-```
+```JavaScript
 modal.on('open', () => {
     console.log('open')
 })
