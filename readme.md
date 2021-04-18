@@ -51,5 +51,4 @@ modal.on('close', () => {
 
 ## 📝 后记
 
-此项目代码参考珠峰前端直播课程所教授内容。  
-readme 内容按照 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 进行排版。
+此项目代码参考珠峰前端直播课程所教授内容，readme 内容按照 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 进行排版。
